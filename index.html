@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="Mill Road Wood and Concrete — custom tables, benches and countertops hand-built in Guelph, Ontario by Mathieu Poulin. Functional installation art in wood, epoxy and concrete." />
+<meta name="theme-color" content="#1a1310" />
+<meta property="og:title" content="Mill Road Wood and Concrete — Custom Tables, Benches, Countertops" />
+<meta property="og:description" content="Functional installation art. Hand-built in Guelph, Ontario. Wood, epoxy, concrete — aerospace-engineer meticulous." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/1683824194123-O808MAPWOX7NWELZLWPJ/Wed+A%26T+session-030small+leaf+bottom.jpg?format=1500w" />
+<title>Mill Road Wood and Concrete — Custom Tables, Benches, Countertops · Guelph, Ontario</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.squarespace-cdn.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,30..100,0..1;1,9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   MILL ROAD WOOD AND CONCRETE
+   Design system — warm artisan craft
+   ========================================================= */
+
+:root{
+  /* Color — layered wood & concrete palette */
+  --ink:         #1a1310;          /* near-black walnut */
+  --ink-soft:    #2b1f18;
+  --bone:        #f6efe2;          /* warm bone */
+  --cream:       #faf6ec;
+  --paper:       #efe6d2;          /* rich paper */
+  --concrete:    #6f6a64;          /* raw concrete */
+  --concrete-2:  #8d8780;
+  --clay:        #a5431f;          /* burnt sienna accent */
+  --clay-2:      #c2572a;
+  --gold:        #b8904a;          /* soft brass */
+  --gold-2:      #d4ab64;
+  --forest:      #4a5b44;
+  --line:        rgba(26,19,16,0.14);
+  --line-cream:  rgba(246,239,226,0.16);
+
+  /* Type */
+  --serif:  'Fraunces', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono:   ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Scale — fluid type */
+  --fs-xs:  clamp(11px, 0.72vw + 9px, 13px);
+  --fs-sm:  clamp(13px, 0.5vw + 12px, 15px);
+  --fs-md:  clamp(15px, 0.4vw + 14px, 17px);
+  --fs-lg:  clamp(18px, 0.8vw + 16px, 22px);
+  --fs-xl:  clamp(22px, 1.2vw + 20px, 30px);
+  --fs-2xl: clamp(32px, 2.6vw + 24px, 52px);
+  --fs-3xl: clamp(44px, 4.8vw + 28px, 96px);
+  --fs-4xl: clamp(64px, 7vw + 36px, 148px);
+
+  /* Spacing */
+  --pad-x:   clamp(20px, 4vw, 64px);
+  --gap-sm:  12px;
+  --gap-md:  24px;
+  --gap-lg:  48px;
+  --gap-xl:  96px;
+
+  --max:     1360px;
+  --max-narrow: 860px;
+
+  --radius:  2px;
+  --ease:    cubic-bezier(.2,.7,.2,1);
+  --ease-hero: cubic-bezier(.16,1,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html:focus-within{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-size:var(--fs-md);
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img,svg,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,textarea,select{font-family:inherit;font-size:inherit;color:inherit}
+
+::selection{background:var(--clay);color:var(--bone)}
+
+/* ---------- Reusable primitives ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--sans);font-size:11px;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--clay);
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.eyebrow.plain::before{display:none}
+.eyebrow.center{justify-content:center}
+.eyebrow.on-dark{color:var(--gold-2)}
+
+.display{
+  font-family:var(--serif);
+  font-weight:400;
+  font-variation-settings:"opsz" 96, "SOFT" 30, "WONK" 0;
+  letter-spacing:-0.015em;
+  line-height:1.02;
+  color:var(--ink);
+}
+.display em{font-style:italic;font-variation-settings:"opsz" 96, "SOFT" 100, "WONK" 1;color:var(--clay);font-weight:350}
+.display .tracked{font-size:.42em;letter-spacing:.32em;text-transform:uppercase;font-weight:500;display:block;color:var(--concrete);margin-bottom:1.4em;font-family:var(--sans)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 28px;border-radius:2px;
+  font-family:var(--sans);font-size:13px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  transition:all .4s var(--ease);
+  position:relative;overflow:hidden;
+  cursor:pointer;
+}
+.btn svg{width:14px;height:14px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-primary{background:var(--ink);color:var(--bone);border:1px solid var(--ink)}
+.btn-primary:hover{background:var(--clay);border-color:var(--clay)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--bone)}
+.btn-ghost-light{background:transparent;color:var(--bone);border:1px solid rgba(246,239,226,.5)}
+.btn-ghost-light:hover{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.btn-link{padding:0;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid currentColor;padding-bottom:2px;gap:8px}
+.btn-link:hover{color:var(--clay)}
+
+.section{padding:clamp(80px,8vw,140px) var(--pad-x);position:relative}
+.section--pad-sm{padding:clamp(64px,6vw,100px) var(--pad-x)}
+.section--dark{background:var(--ink);color:var(--bone)}
+.section--dark .display{color:var(--bone)}
+.section--dark .display em{color:var(--gold-2)}
+.section--dark .display .tracked{color:var(--gold)}
+.section--cream{background:var(--cream)}
+.section--paper{background:var(--paper)}
+.wrap{max-width:var(--max);margin:0 auto;width:100%}
+.wrap-narrow{max-width:var(--max-narrow);margin:0 auto;width:100%}
+
+.divider{height:1px;background:var(--line);margin:0 auto;max-width:var(--max)}
+.divider--dark{background:var(--line-cream)}
+
+/* =========================================================
+   PRELOADER
+   ========================================================= */
+#preloader{
+  position:fixed;inset:0;z-index:200;
+  background:var(--ink);color:var(--bone);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:24px;
+  transition:opacity .9s var(--ease-hero), visibility .9s var(--ease-hero);
+}
+#preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+.pre-mark{
+  width:64px;height:64px;position:relative;
+}
+.pre-mark svg{width:100%;height:100%}
+.pre-mark svg path{stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.6s var(--ease-hero) forwards}
+.pre-mark svg path:nth-child(2){animation-delay:.2s}
+.pre-mark svg path:nth-child(3){animation-delay:.4s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pre-tag{
+  font-family:var(--sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold-2);opacity:0;animation:fade .8s .9s forwards
+}
+@keyframes fade{to{opacity:1}}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:90;
+  padding:22px var(--pad-x);
+  transition:all .5s var(--ease);
+  display:flex;align-items:center;justify-content:space-between;
+  mix-blend-mode:difference;
+  color:var(--bone);
+}
+.nav.scrolled{
+  mix-blend-mode:normal;
+  background:rgba(250,246,236,.92);
+  backdrop-filter:blur(16px) saturate(1.2);
+  -webkit-backdrop-filter:blur(16px) saturate(1.2);
+  padding:14px var(--pad-x);
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+}
+.nav-brand{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-size:18px;letter-spacing:.02em;font-weight:500}
+.nav-brand .mark{
+  width:34px;height:34px;display:flex;align-items:center;justify-content:center;
+  border:1px solid currentColor;border-radius:50%;
+}
+.nav-brand .mark svg{width:17px;height:17px}
+.nav-brand .brand-name{line-height:1;letter-spacing:.06em}
+.nav-brand .brand-sub{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;opacity:.7;margin-top:3px}
+
+.nav-center{display:flex;gap:40px;align-items:center}
+.nav-center a{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;position:relative;padding:6px 0;transition:color .3s var(--ease)}
+.nav-center a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav-center a:hover::after{transform:scaleX(1)}
+.nav-right{display:flex;gap:16px;align-items:center}
+.nav-right .btn{padding:12px 22px;font-size:11px}
+
+.nav-burger{display:none;width:36px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer}
+.nav-burger span{display:block;width:22px;height:1.5px;background:currentColor;transition:all .3s var(--ease)}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* Mobile nav overlay */
+.nav-overlay{
+  position:fixed;inset:0;z-index:85;
+  background:var(--ink);color:var(--bone);
+  display:flex;align-items:center;justify-content:center;
+  transform:translateY(-100%);transition:transform .6s var(--ease-hero);
+  padding:var(--pad-x);
+}
+.nav-overlay.open{transform:translateY(0)}
+.nav-overlay-inner{text-align:center;display:flex;flex-direction:column;gap:28px;align-items:center}
+.nav-overlay-inner a{font-family:var(--serif);font-size:clamp(32px,6vw,56px);letter-spacing:-0.015em;line-height:1.1;color:var(--bone)}
+.nav-overlay-inner a:hover{color:var(--gold-2);font-style:italic}
+.nav-overlay-contact{margin-top:40px;padding-top:28px;border-top:1px solid var(--line-cream);font-family:var(--sans);font-size:13px;color:var(--gold-2);letter-spacing:.05em}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative;
+  min-height:100vh;min-height:100dvh;
+  background:var(--ink);
+  color:var(--bone);
+  overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:140px var(--pad-x) 64px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background-image:url('https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/530f9d79-6902-4751-bb17-32fe6b86ae30/2N0A1573.jpg?format=2500w');
+  background-size:cover;background-position:center;
+  transform:scale(1.08);
+  animation:heroZoom 14s var(--ease-hero) forwards;
+  filter:brightness(.62) saturate(1.05);
+}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:2;
+  background:
+    linear-gradient(180deg, rgba(26,19,16,0.15) 0%, rgba(26,19,16,0) 30%, rgba(26,19,16,0) 50%, rgba(26,19,16,.75) 100%),
+    linear-gradient(92deg, rgba(26,19,16,.35) 0%, rgba(26,19,16,0) 55%);
+}
+.hero-inner{position:relative;z-index:3;max-width:var(--max);width:100%;margin:0 auto}
+.hero-eyebrow{
+  font-family:var(--sans);font-size:11px;font-weight:500;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--gold-2);
+  display:flex;align-items:center;gap:14px;margin-bottom:28px;
+  opacity:0;animation:rise 1s 1.4s var(--ease-hero) forwards;
+}
+.hero-eyebrow::before{content:"";width:36px;height:1px;background:currentColor}
+
+.hero h1{
+  font-family:var(--serif);font-weight:300;
+  font-variation-settings:"opsz" 144, "SOFT" 100, "WONK" 0;
+  font-size:var(--fs-3xl);line-height:.97;letter-spacing:-0.025em;
+  color:var(--bone);
+  max-width:11ch;
+  margin-bottom:36px;
+  opacity:0;transform:translateY(28px);
+  animation:rise 1.2s 1.7s var(--ease-hero) forwards;
+}
+.hero h1 em{font-variation-settings:"opsz" 144, "SOFT" 100, "WONK" 1;color:var(--gold-2);font-style:italic;font-weight:300}
+.hero h1 .nowrap{display:inline-block}
+
+.hero-lead{
+  font-family:var(--sans);font-size:var(--fs-lg);font-weight:300;
+  line-height:1.5;color:rgba(246,239,226,.82);
+  max-width:42ch;margin-bottom:44px;
+  opacity:0;transform:translateY(20px);
+  animation:rise 1s 2.1s var(--ease-hero) forwards;
+}
+.hero-actions{
+  display:flex;flex-wrap:wrap;gap:14px;
+  opacity:0;transform:translateY(16px);
+  animation:rise .9s 2.4s var(--ease-hero) forwards;
+}
+
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+.hero-meta{
+  position:absolute;z-index:3;
+  left:var(--pad-x);right:var(--pad-x);
+  bottom:28px;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:28px;
+  font-family:var(--sans);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(246,239,226,.6);
+  opacity:0;animation:rise .9s 2.7s var(--ease-hero) forwards;
+}
+.hero-meta-item span{display:block;color:var(--gold-2);font-weight:600;margin-bottom:4px}
+.hero-scroll{display:flex;align-items:center;gap:10px}
+.hero-scroll-line{width:40px;height:1px;background:currentColor;position:relative;overflow:hidden}
+.hero-scroll-line::after{content:"";position:absolute;inset:0;background:var(--gold-2);transform:translateX(-100%);animation:scroll-tick 2.4s 3s infinite var(--ease)}
+@keyframes scroll-tick{
+  0%{transform:translateX(-100%)}
+  50%{transform:translateX(0)}
+  100%{transform:translateX(100%)}
+}
+
+/* =========================================================
+   TRUST / PILLARS BAR
+   ========================================================= */
+.pillars{
+  background:var(--paper);
+  padding:clamp(48px,5vw,80px) var(--pad-x);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.pillars-grid{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:48px;
+}
+.pillar{display:flex;flex-direction:column;gap:10px}
+.pillar-num{font-family:var(--serif);font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--clay);font-weight:500}
+.pillar h3{font-family:var(--serif);font-size:var(--fs-xl);font-weight:400;line-height:1.1;color:var(--ink);letter-spacing:-0.01em}
+.pillar p{font-size:14px;color:var(--concrete);line-height:1.6;max-width:28ch}
+@media (max-width:860px){.pillars-grid{grid-template-columns:repeat(2,1fr);gap:36px}}
+@media (max-width:520px){.pillars-grid{grid-template-columns:1fr;gap:30px}}
+
+/* =========================================================
+   INTRO / MANIFESTO
+   ========================================================= */
+.manifesto{
+  padding:clamp(100px,10vw,180px) var(--pad-x);
+  background:var(--cream);
+  position:relative;overflow:hidden;
+}
+.manifesto::before{
+  content:"MILL ROAD";
+  position:absolute;top:5%;right:-5%;
+  font-family:var(--serif);font-size:24vw;font-weight:900;
+  color:var(--paper);z-index:0;
+  letter-spacing:-0.04em;line-height:1;
+  opacity:.6;pointer-events:none;
+}
+.manifesto-inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:clamp(40px,6vw,120px);align-items:start}
+.manifesto-left .eyebrow{margin-bottom:20px}
+.manifesto-left p{font-size:14px;color:var(--concrete);max-width:30ch;line-height:1.7}
+.manifesto-right h2{
+  font-family:var(--serif);font-weight:300;
+  font-variation-settings:"opsz" 144, "SOFT" 60, "WONK" 0;
+  font-size:var(--fs-2xl);line-height:1.08;letter-spacing:-0.02em;
+  color:var(--ink);margin-bottom:36px;
+}
+.manifesto-right h2 em{font-style:italic;font-variation-settings:"opsz" 144, "SOFT" 100, "WONK" 1;color:var(--clay)}
+.manifesto-right p{font-size:var(--fs-lg);color:var(--ink-soft);line-height:1.6;margin-bottom:28px;font-weight:300;max-width:56ch}
+.manifesto-sig{margin-top:48px;display:flex;align-items:center;gap:18px}
+.manifesto-sig-img{width:56px;height:56px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;color:var(--clay);font-weight:500}
+.manifesto-sig-text{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--concrete);line-height:1.5}
+.manifesto-sig-text strong{display:block;font-family:var(--serif);font-size:15px;color:var(--ink);font-weight:500;text-transform:none;letter-spacing:.02em;margin-bottom:3px}
+@media (max-width:860px){.manifesto-inner{grid-template-columns:1fr;gap:30px}}
+
+/* =========================================================
+   COLLECTIONS — 3 cards
+   ========================================================= */
+.collections{
+  padding:clamp(80px,8vw,140px) var(--pad-x);
+  background:var(--cream);
+  border-top:1px solid var(--line);
+}
+.collections-header{max-width:var(--max);margin:0 auto 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.collections-header h2{font-family:var(--serif);font-weight:350;font-size:var(--fs-2xl);line-height:1.05;letter-spacing:-0.02em;max-width:14ch}
+.collections-header h2 em{font-style:italic;color:var(--clay);font-variation-settings:"WONK" 1}
+.collections-header-right{font-size:14px;color:var(--concrete);max-width:36ch;line-height:1.6}
+
+.collections-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.collection{position:relative;display:flex;flex-direction:column;gap:20px;cursor:pointer;transition:transform .5s var(--ease)}
+.collection:hover{transform:translateY(-6px)}
+.collection-media{aspect-ratio:3/4;overflow:hidden;background:var(--paper);position:relative}
+.collection-media img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease-hero);filter:saturate(1.05)}
+.collection:hover .collection-media img{transform:scale(1.06)}
+.collection-num{position:absolute;top:14px;left:14px;background:rgba(26,19,16,.7);color:var(--bone);padding:4px 10px;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;backdrop-filter:blur(4px)}
+.collection-cta{position:absolute;bottom:14px;right:14px;background:var(--bone);color:var(--ink);width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:50%;opacity:0;transform:translateY(6px);transition:all .4s var(--ease)}
+.collection:hover .collection-cta{opacity:1;transform:translateY(0)}
+.collection-cta svg{width:14px;height:14px}
+.collection h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-xl);letter-spacing:-0.01em;color:var(--ink)}
+.collection-desc{font-size:14px;color:var(--concrete);line-height:1.6}
+.collection-meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--concrete)}
+.collection-meta b{color:var(--ink);font-weight:600}
+@media (max-width:860px){.collections-grid{grid-template-columns:1fr;gap:36px}}
+
+/* =========================================================
+   PROCESS — 4 steps
+   ========================================================= */
+.process{
+  padding:clamp(100px,10vw,160px) var(--pad-x);
+  background:var(--ink);color:var(--bone);
+  position:relative;overflow:hidden;
+}
+.process::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at top right, rgba(184,144,74,.12), transparent 50%),
+             radial-gradient(ellipse at bottom left, rgba(165,67,31,.08), transparent 50%);
+  pointer-events:none;
+}
+.process-header{max-width:var(--max);margin:0 auto 80px;position:relative;text-align:center}
+.process-header .eyebrow{color:var(--gold-2);margin-bottom:28px}
+.process-header h2{font-family:var(--serif);font-weight:300;font-size:var(--fs-2xl);line-height:1.05;letter-spacing:-0.02em;color:var(--bone);max-width:16ch;margin:0 auto 24px}
+.process-header h2 em{font-style:italic;color:var(--gold-2);font-variation-settings:"WONK" 1}
+.process-header p{max-width:50ch;margin:0 auto;font-size:var(--fs-md);color:rgba(246,239,226,.7);line-height:1.7}
+
+.process-timeline{
+  max-width:var(--max);margin:0 auto;position:relative;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+}
+.process-timeline::before{
+  content:"";position:absolute;top:32px;left:0;right:0;height:1px;background:var(--line-cream);
+}
+.step{padding:0 20px;position:relative}
+.step-num{
+  width:64px;height:64px;border-radius:50%;
+  background:var(--ink-soft);border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:20px;font-weight:500;color:var(--gold-2);
+  margin:0 auto 28px;position:relative;z-index:2;
+  transition:all .4s var(--ease);
+}
+.step:hover .step-num{background:var(--clay);border-color:var(--clay);color:var(--bone);transform:scale(1.05)}
+.step-label{font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:14px}
+.step h4{font-family:var(--serif);font-size:var(--fs-xl);font-weight:400;letter-spacing:-0.01em;color:var(--bone);text-align:center;margin-bottom:14px;line-height:1.15}
+.step p{font-size:14px;color:rgba(246,239,226,.65);line-height:1.7;text-align:center;max-width:28ch;margin:0 auto}
+@media (max-width:860px){
+  .process-timeline{grid-template-columns:1fr;gap:48px}
+  .process-timeline::before{display:none}
+}
+
+/* =========================================================
+   MATERIALS
+   ========================================================= */
+.materials{
+  padding:clamp(100px,10vw,160px) var(--pad-x);
+  background:var(--cream);
+}
+.materials-header{max-width:var(--max);margin:0 auto 64px;text-align:center}
+.materials-header h2{font-family:var(--serif);font-weight:350;font-size:var(--fs-2xl);line-height:1.05;letter-spacing:-0.02em;margin-top:24px;margin-bottom:20px}
+.materials-header h2 em{font-style:italic;color:var(--clay);font-variation-settings:"WONK" 1}
+.materials-header p{max-width:56ch;margin:0 auto;color:var(--concrete);font-size:var(--fs-md);line-height:1.7}
+.materials-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.material{
+  background:var(--bone);border:1px solid var(--line);
+  padding:40px 32px;
+  transition:all .4s var(--ease);position:relative;overflow:hidden;
+}
+.material:hover{border-color:var(--clay);transform:translateY(-4px);box-shadow:0 20px 60px rgba(26,19,16,.08)}
+.material-icon{width:48px;height:48px;margin-bottom:32px;display:flex;align-items:center;justify-content:center;color:var(--clay)}
+.material-icon svg{width:100%;height:100%}
+.material h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-xl);letter-spacing:-0.01em;margin-bottom:14px}
+.material p{font-size:14px;color:var(--concrete);line-height:1.7;margin-bottom:24px}
+.material-specs{padding-top:20px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.material-spec{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete)}
+.material-spec b{display:block;font-family:var(--serif);font-size:15px;color:var(--ink);font-weight:500;margin-top:4px;text-transform:none;letter-spacing:.01em}
+@media (max-width:860px){.materials-grid{grid-template-columns:1fr}}
+
+/* =========================================================
+   PORTFOLIO / GALLERY
+   ========================================================= */
+.portfolio{
+  padding:clamp(100px,10vw,160px) var(--pad-x) clamp(60px,6vw,100px);
+  background:var(--paper);
+}
+.portfolio-header{max-width:var(--max);margin:0 auto 48px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:end}
+.portfolio-header h2{font-family:var(--serif);font-weight:350;font-size:var(--fs-2xl);line-height:1.05;letter-spacing:-0.02em;margin-top:20px;max-width:12ch}
+.portfolio-header h2 em{font-style:italic;color:var(--clay);font-variation-settings:"WONK" 1}
+.portfolio-header-right{font-size:var(--fs-md);color:var(--concrete);line-height:1.7;max-width:44ch;justify-self:end}
+
+.portfolio-filters{
+  max-width:var(--max);margin:0 auto 40px;
+  display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+  padding-top:28px;border-top:1px solid var(--line);
+}
+.portfolio-filters-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--concrete);margin-right:12px}
+.filter{
+  padding:10px 18px;border:1px solid var(--line);background:transparent;
+  font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-soft);transition:all .3s var(--ease);
+  border-radius:50px;cursor:pointer;
+}
+.filter:hover{border-color:var(--ink)}
+.filter.active{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.filter-count{opacity:.6;font-family:var(--mono);font-size:10px;margin-left:6px}
+.filter.active .filter-count{opacity:1}
+.filter-divider{width:1px;height:20px;background:var(--line);margin:0 4px}
+
+.portfolio-grid{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:repeat(12,1fr);gap:12px;
+  grid-auto-rows:minmax(auto,auto);
+}
+.piece{
+  position:relative;cursor:pointer;overflow:hidden;background:var(--bone);
+  transition:opacity .5s var(--ease), transform .5s var(--ease);
+}
+.piece.hidden{display:none}
+.piece-img{width:100%;height:100%;position:relative;overflow:hidden;aspect-ratio:4/5}
+.piece-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease-hero), filter .6s var(--ease);filter:saturate(1.02)}
+.piece:hover .piece-img img{transform:scale(1.05);filter:saturate(1.15)}
+.piece-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(26,19,16,0) 50%, rgba(26,19,16,.7) 100%);
+  opacity:0;transition:opacity .4s var(--ease);
+  display:flex;align-items:flex-end;justify-content:space-between;
+  padding:20px;color:var(--bone);gap:12px;
+}
+.piece:hover .piece-overlay{opacity:1}
+.piece-info h4{font-family:var(--serif);font-size:17px;font-weight:400;letter-spacing:-0.005em;line-height:1.2}
+.piece-info .piece-meta{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);margin-top:6px}
+.piece-price{font-family:var(--mono);font-size:13px;letter-spacing:.02em;color:var(--bone);white-space:nowrap;padding-bottom:2px}
+
+/* Masonry-ish spans */
+.piece.w-3{grid-column:span 3}
+.piece.w-4{grid-column:span 4}
+.piece.w-5{grid-column:span 5}
+.piece.w-6{grid-column:span 6}
+.piece.w-7{grid-column:span 7}
+.piece.w-8{grid-column:span 8}
+.piece.tall .piece-img{aspect-ratio:3/4}
+.piece.wide .piece-img{aspect-ratio:3/2}
+
+@media (max-width:860px){
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .piece.w-3,.piece.w-4,.piece.w-5,.piece.w-6,.piece.w-7,.piece.w-8{grid-column:span 1}
+  .piece.wide,.piece.w-7,.piece.w-8{grid-column:span 2}
+  .portfolio-header{grid-template-columns:1fr}
+  .portfolio-header-right{justify-self:start}
+}
+@media (max-width:520px){
+  .portfolio-grid{grid-template-columns:1fr}
+  .piece.wide,.piece.w-7,.piece.w-8{grid-column:span 1}
+}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:150;
+  background:rgba(26,19,16,.94);backdrop-filter:blur(12px);
+  display:none;align-items:center;justify-content:center;
+  padding:24px;
+}
+.lightbox.open{display:flex}
+.lightbox-inner{max-width:1100px;width:100%;max-height:90vh;position:relative;display:grid;grid-template-columns:3fr 2fr;background:var(--bone);color:var(--ink);gap:0;overflow:hidden}
+.lightbox-media{background:var(--paper);position:relative;min-height:400px}
+.lightbox-media img{width:100%;height:100%;object-fit:cover;max-height:90vh}
+.lightbox-body{padding:48px 44px;display:flex;flex-direction:column;gap:18px;overflow-y:auto}
+.lightbox-body .eyebrow{margin-bottom:8px}
+.lightbox-body h3{font-family:var(--serif);font-size:var(--fs-xl);font-weight:400;line-height:1.15;letter-spacing:-0.015em;margin-bottom:8px}
+.lightbox-body .price{font-family:var(--serif);font-size:24px;color:var(--clay);font-weight:500;margin-bottom:14px}
+.lightbox-body p{font-size:14px;color:var(--concrete);line-height:1.7}
+.lightbox-specs{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:14px 0}
+.lightbox-specs .spec{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete)}
+.lightbox-specs .spec b{display:block;font-family:var(--serif);font-size:14px;color:var(--ink);font-weight:500;margin-top:4px;text-transform:none;letter-spacing:0}
+.lightbox-actions{display:flex;gap:10px;margin-top:auto;padding-top:14px}
+.lightbox-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;background:rgba(250,246,236,.95);color:var(--ink);display:flex;align-items:center;justify-content:center;z-index:3;transition:all .3s var(--ease)}
+.lightbox-close:hover{background:var(--ink);color:var(--bone);transform:rotate(90deg)}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(250,246,236,.9);color:var(--ink);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:3;transition:all .3s var(--ease)}
+.lightbox-nav:hover{background:var(--ink);color:var(--bone)}
+.lightbox-nav.prev{left:14px}
+.lightbox-nav.next{right:14px}
+@media (max-width:860px){
+  .lightbox-inner{grid-template-columns:1fr;max-height:95vh;overflow-y:auto}
+  .lightbox-media{min-height:auto;aspect-ratio:4/5}
+  .lightbox-body{padding:28px}
+}
+
+/* =========================================================
+   FEATURE SPOTLIGHT — editorial banner
+   ========================================================= */
+.spotlight{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:540px;align-items:stretch;
+  background:var(--ink);color:var(--bone);
+}
+.spotlight-media{
+  background-image:url('https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/1683824194123-O808MAPWOX7NWELZLWPJ/Wed+A%26T+session-030small+leaf+bottom.jpg?format=1500w');
+  background-size:cover;background-position:center;
+  filter:saturate(1.08);
+}
+.spotlight-body{display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,6vw,96px)}
+.spotlight-body .eyebrow{margin-bottom:24px;color:var(--gold-2)}
+.spotlight-body .eyebrow::before{background:currentColor}
+.spotlight-body h2{font-family:var(--serif);font-weight:300;font-size:var(--fs-2xl);letter-spacing:-0.02em;line-height:1.06;margin-bottom:24px;max-width:16ch}
+.spotlight-body h2 em{font-style:italic;color:var(--gold-2);font-variation-settings:"WONK" 1}
+.spotlight-body p{font-size:var(--fs-md);color:rgba(246,239,226,.78);line-height:1.7;margin-bottom:18px;max-width:50ch}
+.spotlight-body .cta-row{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){
+  .spotlight{grid-template-columns:1fr}
+  .spotlight-media{aspect-ratio:4/3;min-height:auto}
+}
+
+/* =========================================================
+   COMMISSION FLOW — multi-step form
+   ========================================================= */
+.commission{
+  padding:clamp(100px,10vw,160px) var(--pad-x);
+  background:var(--cream);
+}
+.commission-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(48px,6vw,96px);align-items:start}
+.commission-left{position:sticky;top:120px}
+.commission-left h2{font-family:var(--serif);font-weight:350;font-size:var(--fs-2xl);line-height:1.05;letter-spacing:-0.02em;margin:24px 0 24px}
+.commission-left h2 em{font-style:italic;color:var(--clay);font-variation-settings:"WONK" 1}
+.commission-left p{font-size:var(--fs-md);color:var(--concrete);line-height:1.7;margin-bottom:32px}
+
+.commission-steps-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--concrete);margin-bottom:14px;font-weight:600}
+.commission-steps-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.commission-steps-list li{
+  display:flex;align-items:center;gap:14px;
+  padding:12px 0;font-size:14px;color:var(--concrete);
+  font-family:var(--serif);border-top:1px solid var(--line);
+  transition:color .3s var(--ease);
+}
+.commission-steps-list li:last-child{border-bottom:1px solid var(--line)}
+.commission-steps-list li .ss-num{font-family:var(--mono);font-size:11px;width:24px;color:var(--concrete-2);letter-spacing:.1em}
+.commission-steps-list li.active{color:var(--ink)}
+.commission-steps-list li.active .ss-num{color:var(--clay)}
+.commission-steps-list li.done{color:var(--ink-soft)}
+.commission-steps-list li.done .ss-num{color:var(--forest)}
+.commission-steps-list li.done .ss-num::after{content:" ✓"}
+
+/* Right-side form */
+.commission-right{
+  background:var(--bone);border:1px solid var(--line);
+  padding:clamp(32px,4vw,56px);
+  min-height:580px;
+  display:flex;flex-direction:column;
+  box-shadow:0 20px 80px rgba(26,19,16,.05);
+}
+.commission-progress{
+  display:flex;gap:6px;margin-bottom:36px;
+}
+.commission-progress span{
+  flex:1;height:3px;background:var(--line);border-radius:2px;
+  transition:background .4s var(--ease);
+}
+.commission-progress span.active{background:var(--clay)}
+.commission-progress span.done{background:var(--ink)}
+
+.step-panel{display:none;flex-direction:column;gap:22px;flex:1}
+.step-panel.active{display:flex;animation:panelIn .5s var(--ease-hero)}
+@keyframes panelIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+.step-num-label{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);font-weight:600}
+.step-panel h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-xl);line-height:1.15;letter-spacing:-0.015em;color:var(--ink);margin-bottom:4px}
+.step-panel .step-sub{font-size:14px;color:var(--concrete);line-height:1.6;margin-bottom:6px}
+
+.opt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.opt-grid-3{grid-template-columns:repeat(3,1fr)}
+.opt{
+  padding:16px 14px;border:1px solid var(--line);background:var(--cream);
+  cursor:pointer;transition:all .25s var(--ease);
+  display:flex;flex-direction:column;gap:4px;text-align:left;
+}
+.opt:hover{border-color:var(--ink);background:var(--bone)}
+.opt.selected{border-color:var(--clay);background:var(--bone);box-shadow:inset 0 0 0 1px var(--clay)}
+.opt-label{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--ink)}
+.opt-sub{font-size:11px;color:var(--concrete);letter-spacing:.06em}
+.opt-ico{font-size:18px;margin-bottom:6px}
+
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete);font-weight:600}
+.field input[type=text],.field input[type=email],.field input[type=tel],.field textarea,.field select{
+  background:var(--cream);border:1px solid var(--line);padding:14px 16px;
+  font-size:15px;color:var(--ink);border-radius:0;transition:all .25s var(--ease);
+}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--clay);background:var(--bone)}
+.field textarea{min-height:110px;resize:vertical;font-family:var(--sans);line-height:1.5}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+.range-wrap{background:var(--cream);border:1px solid var(--line);padding:18px 20px}
+.range-wrap label{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete);font-weight:600;margin-bottom:14px}
+.range-wrap label b{font-family:var(--serif);font-size:22px;color:var(--clay);text-transform:none;letter-spacing:.01em;font-weight:500}
+.range-wrap input[type=range]{
+  width:100%;height:2px;-webkit-appearance:none;appearance:none;
+  background:linear-gradient(to right, var(--clay) 0%, var(--clay) var(--p,40%), var(--line) var(--p,40%), var(--line) 100%);
+  cursor:pointer;
+}
+.range-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--ink);border-radius:50%;cursor:pointer;border:3px solid var(--bone);box-shadow:0 0 0 1px var(--ink)}
+.range-wrap input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--ink);border-radius:50%;cursor:pointer;border:3px solid var(--bone)}
+
+.step-actions{margin-top:auto;padding-top:32px;display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line)}
+.step-back{color:var(--concrete);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:12px 0;display:flex;align-items:center;gap:8px;cursor:pointer;transition:color .3s var(--ease)}
+.step-back:hover{color:var(--ink)}
+.step-back:disabled{opacity:.3;cursor:default}
+.step-next{background:var(--ink);color:var(--bone);padding:14px 28px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:all .3s var(--ease);border-radius:2px;display:flex;align-items:center;gap:8px}
+.step-next:hover{background:var(--clay)}
+.step-next svg{width:13px;height:13px}
+
+.commission-done{
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:60px 20px;gap:20px;flex:1;
+}
+.commission-done.active{display:flex}
+.done-icon{width:64px;height:64px;border-radius:50%;background:var(--forest);color:var(--bone);display:flex;align-items:center;justify-content:center;font-size:28px}
+.commission-done h3{font-family:var(--serif);font-size:26px;font-weight:400;line-height:1.15}
+.commission-done p{font-size:14px;color:var(--concrete);max-width:36ch;line-height:1.6}
+
+@media (max-width:860px){
+  .commission-inner{grid-template-columns:1fr}
+  .commission-left{position:static}
+  .opt-grid-3{grid-template-columns:1fr 1fr}
+  .field-row{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.testimonials{
+  padding:clamp(100px,10vw,160px) var(--pad-x);
+  background:var(--ink);color:var(--bone);
+  position:relative;overflow:hidden;
+}
+.testimonials::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at center, rgba(184,144,74,.08), transparent 50%);
+}
+.testimonials-header{max-width:var(--max);margin:0 auto 56px;position:relative;text-align:center}
+.testimonials-header h2{font-family:var(--serif);font-weight:300;font-size:var(--fs-2xl);line-height:1.05;letter-spacing:-0.02em;color:var(--bone);margin-top:24px;max-width:20ch;margin-left:auto;margin-right:auto}
+.testimonials-header h2 em{font-style:italic;color:var(--gold-2)}
+.testimonials-track{max-width:920px;margin:0 auto;position:relative;min-height:340px}
+.quote{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  opacity:0;transform:translateY(10px);transition:opacity .7s var(--ease-hero), transform .7s var(--ease-hero);
+  pointer-events:none;
+}
+.quote.active{opacity:1;transform:translateY(0);pointer-events:auto;position:relative}
+.quote-mark{font-family:var(--serif);font-size:80px;line-height:1;color:var(--clay);margin-bottom:14px;font-variation-settings:"WONK" 1}
+.quote-text{font-family:var(--serif);font-weight:300;font-size:clamp(20px,2vw,28px);line-height:1.45;color:var(--bone);max-width:38ch;margin-bottom:36px;letter-spacing:-0.005em}
+.quote-text em{color:var(--gold-2);font-style:italic}
+.quote-meta{display:flex;flex-direction:column;gap:4px;align-items:center}
+.quote-name{font-family:var(--serif);font-size:16px;color:var(--gold-2);letter-spacing:.01em}
+.quote-role{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,239,226,.55)}
+
+.testimonials-controls{margin-top:48px;display:flex;align-items:center;justify-content:center;gap:28px}
+.t-dots{display:flex;gap:8px}
+.t-dot{width:8px;height:8px;border-radius:50%;background:rgba(246,239,226,.18);transition:all .3s var(--ease);cursor:pointer;border:0}
+.t-dot.active{background:var(--gold-2);width:28px;border-radius:4px}
+.t-arrow{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-cream);display:flex;align-items:center;justify-content:center;color:var(--bone);transition:all .3s var(--ease)}
+.t-arrow:hover{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.t-arrow svg{width:14px;height:14px}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq{
+  padding:clamp(80px,8vw,140px) var(--pad-x);
+  background:var(--cream);
+}
+.faq-inner{max-width:920px;margin:0 auto}
+.faq-header{text-align:center;margin-bottom:56px}
+.faq-header h2{font-family:var(--serif);font-weight:350;font-size:var(--fs-2xl);line-height:1.05;letter-spacing:-0.02em;margin-top:18px;max-width:22ch;margin-left:auto;margin-right:auto}
+.faq-header h2 em{font-style:italic;color:var(--clay);font-variation-settings:"WONK" 1}
+
+.faq-item{
+  border-bottom:1px solid var(--line);
+}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-q{
+  width:100%;text-align:left;padding:26px 0;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  font-family:var(--serif);font-size:var(--fs-lg);font-weight:400;
+  letter-spacing:-0.005em;color:var(--ink);line-height:1.3;
+  transition:color .3s var(--ease);
+}
+.faq-q:hover{color:var(--clay)}
+.faq-icon{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease);color:var(--ink)}
+.faq-icon svg{width:12px;height:12px;transition:transform .4s var(--ease)}
+.faq-item.open .faq-icon{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.faq-item.open .faq-icon svg{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .6s var(--ease), padding .6s var(--ease);
+  font-size:var(--fs-md);color:var(--concrete);line-height:1.75;
+}
+.faq-item.open .faq-a{max-height:400px;padding:0 0 28px}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{
+  padding:clamp(100px,10vw,160px) var(--pad-x) clamp(60px,6vw,100px);
+  background:var(--paper);
+  position:relative;
+}
+.contact-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:5fr 7fr;gap:clamp(48px,6vw,96px)}
+.contact-left h2{font-family:var(--serif);font-weight:300;font-size:var(--fs-2xl);line-height:1.04;letter-spacing:-0.02em;margin:24px 0 24px}
+.contact-left h2 em{font-style:italic;color:var(--clay);font-variation-settings:"WONK" 1}
+.contact-left > p{font-size:var(--fs-md);color:var(--concrete);line-height:1.7;margin-bottom:40px;max-width:40ch}
+
+.contact-details{display:flex;flex-direction:column;gap:22px;padding-top:32px;border-top:1px solid var(--line)}
+.contact-detail{display:flex;gap:20px;align-items:flex-start}
+.contact-detail-icon{
+  width:44px;height:44px;border-radius:50%;background:var(--bone);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--clay);flex-shrink:0;
+}
+.contact-detail-icon svg{width:18px;height:18px}
+.contact-detail-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--concrete);font-weight:600;margin-bottom:3px}
+.contact-detail-value{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:400;letter-spacing:.01em}
+.contact-detail a{display:inline-block;transition:color .3s var(--ease)}
+.contact-detail a:hover{color:var(--clay)}
+
+.contact-right{background:var(--bone);border:1px solid var(--line);padding:clamp(32px,4vw,56px);box-shadow:0 20px 80px rgba(26,19,16,.04)}
+.contact-right .field{margin-bottom:20px}
+.contact-right .field input,.contact-right .field textarea{background:var(--cream)}
+
+.contact-right .btn{width:100%;justify-content:center}
+
+.service-area{
+  max-width:var(--max);margin:64px auto 0;
+  padding-top:40px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete);
+}
+.service-area b{color:var(--ink);font-family:var(--serif);font-weight:500;font-size:14px;letter-spacing:.02em;text-transform:none}
+@media (max-width:860px){
+  .contact-inner{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer{
+  background:var(--ink);color:var(--bone);
+  padding:clamp(64px,6vw,100px) var(--pad-x) 40px;
+}
+.footer-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid var(--line-cream)}
+.footer-brand h3{font-family:var(--serif);font-weight:400;font-size:28px;letter-spacing:-0.01em;margin-bottom:14px}
+.footer-brand h3 em{font-style:italic;color:var(--gold-2)}
+.footer-brand p{font-size:14px;color:rgba(246,239,226,.6);line-height:1.7;margin-bottom:24px;max-width:36ch}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-cream);display:flex;align-items:center;justify-content:center;color:var(--bone);transition:all .3s var(--ease)}
+.footer-social a:hover{background:var(--bone);color:var(--ink)}
+.footer-social svg{width:16px;height:16px}
+.footer-col h4{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);font-weight:600;margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:14px;color:rgba(246,239,226,.75);transition:color .3s var(--ease)}
+.footer-col ul a:hover{color:var(--bone)}
+.footer-bottom{max-width:var(--max);margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,239,226,.4)}
+@media (max-width:860px){.footer-inner{grid-template-columns:1fr 1fr;gap:32px}.footer-brand{grid-column:span 2}}
+@media (max-width:520px){.footer-inner{grid-template-columns:1fr}.footer-brand{grid-column:auto}}
+
+/* =========================================================
+   SCROLL-IN ANIMATIONS
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 1s var(--ease-hero), transform 1s var(--ease-hero)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+@media (max-width:860px){
+  .nav-center{display:none}
+  .nav-burger{display:flex}
+  .nav-right .btn{display:none}
+  .hero{padding:120px var(--pad-x) 80px}
+  .hero-meta{flex-direction:column;align-items:flex-start;gap:18px}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .hero::before{transform:none;animation:none}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     PRELOADER
+     ========================================================= -->
+<div id="preloader" aria-hidden="true">
+  <div class="pre-mark">
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M10 54 L10 18 L22 34 L34 18 L34 54" />
+      <path d="M42 54 L42 18 L54 34" />
+      <path d="M6 60 L58 60" />
+    </svg>
+  </div>
+  <div class="pre-tag">Mill Road · Est. 2023</div>
+</div>
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-brand" aria-label="Mill Road home">
+    <span class="mark">
+      <svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M2 14 L2 4 L6 9 L10 4 L10 14" />
+        <path d="M12 14 L12 4 L15 8" />
+      </svg>
+    </span>
+    <span>
+      <span class="brand-name">Mill Road</span>
+      <span class="brand-sub">Wood · Concrete · Epoxy</span>
+    </span>
+  </a>
+  <div class="nav-center">
+    <a href="#collections">Collections</a>
+    <a href="#process">The Craft</a>
+    <a href="#portfolio">Gallery</a>
+    <a href="#about">Who We Are</a>
+    <a href="#commission">Commission</a>
+  </div>
+  <div class="nav-right">
+    <a href="#contact" class="btn btn-ghost">Contact</a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay">
+  <div class="nav-overlay-inner">
+    <a href="#collections" class="nav-o-link">Collections</a>
+    <a href="#process" class="nav-o-link">The Craft</a>
+    <a href="#portfolio" class="nav-o-link">Gallery</a>
+    <a href="#about" class="nav-o-link">Who We Are</a>
+    <a href="#commission" class="nav-o-link">Commission</a>
+    <a href="#contact" class="nav-o-link">Contact</a>
+    <div class="nav-overlay-contact">
+      <div>647 · 621 · 5517</div>
+      <div style="margin-top:8px;opacity:.7">Guelph, Ontario</div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Guelph, Ontario · Est. 2023</div>
+    <h1>Functional <em>installation</em><br>art for <span class="nowrap">your home.</span></h1>
+    <p class="hero-lead">Custom tables, benches, and countertops — hand-built from live-edge hardwood, hand-finished concrete, and jewel-grade epoxy. Aerospace-engineer meticulous. Made to last generations.</p>
+    <div class="hero-actions">
+      <a href="#commission" class="btn btn-primary">Commission a piece
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#portfolio" class="btn btn-ghost-light">View the gallery</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span>One-of-a-kind</span>
+      Every piece is made once. For you.
+    </div>
+    <div class="hero-meta-item">
+      <span>We deliver · we install · we ship</span>
+      Across Ontario and beyond.
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <span class="hero-scroll-line"></span>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PILLARS
+     ========================================================= -->
+<section class="pillars">
+  <div class="pillars-grid">
+    <div class="pillar reveal">
+      <div class="pillar-num">01 · By hand</div>
+      <h3>Hand-built, in our small shop.</h3>
+      <p>No production lines. No offshore. Every joint, every finish — worked by one pair of hands.</p>
+    </div>
+    <div class="pillar reveal reveal-delay-1">
+      <div class="pillar-num">02 · Meticulous</div>
+      <h3>Aerospace-engineer meticulous.</h3>
+      <p>Mathieu spent a decade in aerospace before turning to wood. That discipline stays in the work.</p>
+    </div>
+    <div class="pillar reveal reveal-delay-2">
+      <div class="pillar-num">03 · One-of-a-kind</div>
+      <h3>Every piece is made once.</h3>
+      <p>Sized, shaped, and finished to your room. No two will ever be alike.</p>
+    </div>
+    <div class="pillar reveal reveal-delay-3">
+      <div class="pillar-num">04 · Generational</div>
+      <h3>Built to outlast us both.</h3>
+      <p>Kiln-dried slabs, mortise joinery, sealed concrete. The kind of furniture a grandchild inherits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     MANIFESTO
+     ========================================================= -->
+<section class="manifesto" id="about">
+  <div class="manifesto-inner">
+    <div class="manifesto-left reveal">
+      <div class="eyebrow">Our belief</div>
+      <p>We make one thing and we make it well: furniture you'll use every day and love every time.</p>
+    </div>
+    <div class="manifesto-right reveal reveal-delay-1">
+      <h2>We consider our work <em>functional installation art</em> — and we treat it that way, every time.</h2>
+      <p>Given their size and their place in a home, a dining table, a bench, a countertop becomes a focal point. A quiet heirloom. Something you gather around. We take that seriously. Each commission begins with a conversation about the room it will live in and ends, months later, with a piece built to your specification — delivered and installed by the same hands that made it.</p>
+      <p style="color:var(--concrete);font-size:var(--fs-md);max-width:50ch">Wood, concrete, and epoxy — the three materials we've spent years learning to marry — let us build pieces that feel both ancient and modern. Warm and honest. Cool and precise. That's the Mill Road tension we're after.</p>
+      <div class="manifesto-sig">
+        <div class="manifesto-sig-img">MP</div>
+        <div class="manifesto-sig-text">
+          <strong>Mathieu Poulin</strong>
+          Founder · Maker
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     COLLECTIONS
+     ========================================================= -->
+<section class="collections" id="collections">
+  <div class="collections-header reveal">
+    <h2>Three disciplines. <em>One workshop.</em></h2>
+    <div class="collections-header-right">Every project begins from one of three starting points. Pick a direction — or tell us what you're imagining and we'll find the right one together.</div>
+  </div>
+  <div class="collections-grid">
+    <a href="#portfolio" class="collection reveal" data-filter="tables">
+      <div class="collection-media">
+        <span class="collection-num">Collection 01</span>
+        <img src="https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/1683824194123-O808MAPWOX7NWELZLWPJ/Wed+A%26T+session-030small+leaf+bottom.jpg?format=1500w" alt="Live-edge walnut dining table by Mill Road" loading="lazy">
+        <span class="collection-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+      </div>
+      <h3>Tables</h3>
+      <p class="collection-desc">Dining, kitchen, coffee. Live-edge slabs, river tables, clean-cut hardwood. Sized to your room, joined to last generations.</p>
+      <div class="collection-meta"><b>From $1,900</b><span>12 pieces in gallery</span></div>
+    </a>
+    <a href="#portfolio" class="collection reveal reveal-delay-1" data-filter="benches">
+      <div class="collection-media">
+        <span class="collection-num">Collection 02</span>
+        <img src="https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/1682359540908-DLIAI5999BN3LKDMGR2M/signature+bench+pan+shot+wide+end.jpg?format=1500w" alt="Hand-built bench by Mill Road" loading="lazy">
+        <span class="collection-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+      </div>
+      <h3>Benches</h3>
+      <p class="collection-desc">Entryway, bedroom, dining, desk. A bench should be beautiful — and built to hold a family's weight for decades.</p>
+      <div class="collection-meta"><b>From $1,650</b><span>6 pieces in gallery</span></div>
+    </a>
+    <a href="#portfolio" class="collection reveal reveal-delay-2" data-filter="countertops">
+      <div class="collection-media">
+        <span class="collection-num">Collection 03</span>
+        <img src="https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/1683915328530-F2KMIK7I3U5NH5UMUWNV/IMG_1311.jpeg?format=1500w" alt="Concrete and wood countertop by Mill Road" loading="lazy" onerror="this.src='https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/1683749515456-XBOTDL0XY9BT110Y8XNJ/tempImagebQTzTO.gif';this.onerror=null">
+        <span class="collection-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+      </div>
+      <h3>Countertops</h3>
+      <p class="collection-desc">Kitchen, vanity, bar. Concrete poured on site, wood milled in the shop — or the quiet marriage of the two.</p>
+      <div class="collection-meta"><b>From $2,100</b><span>4 pieces in gallery</span></div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =========================================================
+     PROCESS
+     ========================================================= -->
+<section class="process section--dark" id="process">
+  <div class="process-header reveal">
+    <div class="eyebrow on-dark center">The Craft</div>
+    <h2>From a standing tree to <em>a finished room.</em></h2>
+    <p>Every commission moves through the same four-stage arc — sometimes over six weeks, sometimes over six months. You're welcome at any step, and most clients come by the shop at least once.</p>
+  </div>
+  <div class="process-timeline">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div class="step-label">Selection</div>
+      <h4>The slab & the sketch.</h4>
+      <p>We meet, we measure the room, we pull a slab. Or we pour a form. The piece starts with a direction, not a drawing.</p>
+    </div>
+    <div class="step reveal reveal-delay-1">
+      <div class="step-num">02</div>
+      <div class="step-label">Design</div>
+      <h4>Shaped to the space.</h4>
+      <p>Proportions, height, base. You approve the scale and the joinery. Only then do we start cutting.</p>
+    </div>
+    <div class="step reveal reveal-delay-2">
+      <div class="step-num">03</div>
+      <div class="step-label">Build</div>
+      <h4>By one pair of hands.</h4>
+      <p>Hand-planed, mortised, finished. Concrete cures for weeks. Epoxy pours multiple times, demolded by hand.</p>
+    </div>
+    <div class="step reveal reveal-delay-3">
+      <div class="step-num">04</div>
+      <div class="step-label">Install</div>
+      <h4>In your room, by us.</h4>
+      <p>We deliver it. We carry it in. We install it, level it, and walk you through caring for it. Then we check in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FEATURE SPOTLIGHT — editorial
+     ========================================================= -->
+<section class="spotlight" aria-label="Featured craftsman">
+  <div class="spotlight-media" role="img" aria-label="A 10-foot walnut dining table with a live-edge finish"></div>
+  <div class="spotlight-body">
+    <div class="eyebrow on-dark">Signature piece · The 10' Walnut</div>
+    <h2>A single slab. <em>Ten feet.</em> Twenty seats at Christmas.</h2>
+    <p>Kiln-dried black walnut from a tree that stood one county over. Hand-flattened, epoxy-stabilized, oil-finished. The kind of table a family grows up around and hands on.</p>
+    <p style="opacity:.65;font-size:14px">Similar commissions available from $7,500 — lead time 12–16 weeks.</p>
+    <div class="cta-row">
+      <a href="#portfolio" class="btn btn-ghost-light">See the gallery</a>
+      <a href="#commission" class="btn btn-primary" style="background:var(--gold-2);border-color:var(--gold-2);color:var(--ink)">Commission yours</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     MATERIALS
+     ========================================================= -->
+<section class="materials">
+  <div class="materials-header reveal">
+    <div class="eyebrow center">Our materials</div>
+    <h2>Three natural mediums. <em>One careful hand.</em></h2>
+    <p>We've spent years learning how these three materials behave — how wood moves with the seasons, how concrete cures without cracking, how epoxy pours without bubbling. It's the combination that makes a Mill Road piece.</p>
+  </div>
+  <div class="materials-grid">
+    <div class="material reveal">
+      <div class="material-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M24 6c-6 8-6 16 0 24 6-8 6-16 0-24z"/>
+          <path d="M24 30 L24 44"/>
+          <path d="M16 18 c4 -2 12 -2 16 0"/>
+          <path d="M16 24 c4 -2 12 -2 16 0"/>
+        </svg>
+      </div>
+      <h3>Wood</h3>
+      <p>Walnut, white oak, maple, cherry — locally sourced where we can, live-edge wherever it's beautiful. Kiln-dried to 6–8% before it enters the shop.</p>
+      <div class="material-specs">
+        <div class="material-spec">Species<b>12+ available</b></div>
+        <div class="material-spec">Finish<b>Hand-rubbed oil</b></div>
+        <div class="material-spec">Joinery<b>Mortise & tenon</b></div>
+        <div class="material-spec">Stabilization<b>Epoxy-filled</b></div>
+      </div>
+    </div>
+    <div class="material reveal reveal-delay-1">
+      <div class="material-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="6" y="12" width="36" height="24" rx="1"/>
+          <path d="M6 18 L42 18 M6 30 L42 30"/>
+          <circle cx="14" cy="24" r="1.2" fill="currentColor"/>
+          <circle cx="22" cy="22" r="0.8" fill="currentColor"/>
+          <circle cx="30" cy="26" r="1.2" fill="currentColor"/>
+        </svg>
+      </div>
+      <h3>Concrete</h3>
+      <p>Cast in our shop using a proprietary blend — stronger, lighter, thinner than standard concrete. Sealed against stains, heat, and a lifetime of family dinners.</p>
+      <div class="material-specs">
+        <div class="material-spec">Thickness<b>1.5" typical</b></div>
+        <div class="material-spec">Cure time<b>28 days</b></div>
+        <div class="material-spec">Finishes<b>7 options</b></div>
+        <div class="material-spec">Sealer<b>Food-safe</b></div>
+      </div>
+    </div>
+    <div class="material reveal reveal-delay-2">
+      <div class="material-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M14 8 L34 8 L30 24 Q24 30 18 24 Z"/>
+          <path d="M24 30 L24 42"/>
+          <path d="M16 42 L32 42"/>
+          <path d="M18 14 L30 14 M20 19 L28 19"/>
+        </svg>
+      </div>
+      <h3>Epoxy</h3>
+      <p>Jewel-grade bio-based epoxy used for river inlays, void-filling, and full-depth pours. UV-stable, food-safe, and tuned to match the wood's tone — not fight it.</p>
+      <div class="material-specs">
+        <div class="material-spec">Formulation<b>Bio-based</b></div>
+        <div class="material-spec">UV protection<b>Stabilized</b></div>
+        <div class="material-spec">Tints<b>Custom matched</b></div>
+        <div class="material-spec">Depth<b>Up to 2"</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PORTFOLIO / GALLERY
+     ========================================================= -->
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-header reveal">
+    <div>
+      <div class="eyebrow">The Gallery</div>
+      <h2>Fifteen recent <em>commissions.</em></h2>
+    </div>
+    <div class="portfolio-header-right">Each piece here was made for a home in Ontario — or somewhere we shipped it. Click any piece for its size, material, price, and the story of how it was made.</div>
+  </div>
+
+  <div class="portfolio-filters reveal">
+    <span class="portfolio-filters-label">Type</span>
+    <button class="filter active" data-filter="all">All <span class="filter-count">15</span></button>
+    <button class="filter" data-filter="tables">Tables <span class="filter-count">9</span></button>
+    <button class="filter" data-filter="benches">Benches <span class="filter-count">3</span></button>
+    <button class="filter" data-filter="countertops">Countertops <span class="filter-count">3</span></button>
+    <span class="filter-divider"></span>
+    <span class="portfolio-filters-label">Material</span>
+    <button class="filter" data-material="wood">Wood</button>
+    <button class="filter" data-material="concrete">Concrete</button>
+    <button class="filter" data-material="epoxy">Epoxy</button>
+  </div>
+
+  <div class="portfolio-grid" id="portfolioGrid">
+    <!-- pieces inserted by JS -->
+  </div>
+</section>
+
+<!-- =========================================================
+     COMMISSION FLOW
+     ========================================================= -->
+<section class="commission" id="commission">
+  <div class="commission-inner">
+    <div class="commission-left">
+      <div class="eyebrow">Commission</div>
+      <h2>Tell us what you're <em>picturing.</em></h2>
+      <p>This is how most of our pieces start: a conversation, a room, a rough budget. Answer five quick questions and we'll reach out within two business days with a proposed direction, a lead time, and a quote range.</p>
+      <div class="commission-steps-label">The conversation</div>
+      <ol class="commission-steps-list" id="stepsList">
+        <li data-step="1"><span class="ss-num">01</span>The piece</li>
+        <li data-step="2"><span class="ss-num">02</span>The material</li>
+        <li data-step="3"><span class="ss-num">03</span>The space</li>
+        <li data-step="4"><span class="ss-num">04</span>The budget</li>
+        <li data-step="5"><span class="ss-num">05</span>Your details</li>
+      </ol>
+    </div>
+
+    <div class="commission-right">
+      <div class="commission-progress" id="progress">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="step-panel active" data-panel="1">
+        <div class="step-num-label">Step 01 of 05</div>
+        <h3>What kind of piece are you imagining?</h3>
+        <div class="step-sub">Pick one. You can always change direction later.</div>
+        <div class="opt-grid">
+          <button class="opt" data-choice="piece" data-value="dining"><span class="opt-ico">🍽</span><span class="opt-label">Dining table</span><span class="opt-sub">4–14 seats</span></button>
+          <button class="opt" data-choice="piece" data-value="coffee"><span class="opt-ico">☕</span><span class="opt-label">Coffee table</span><span class="opt-sub">Living room focal</span></button>
+          <button class="opt" data-choice="piece" data-value="bench"><span class="opt-ico">🪑</span><span class="opt-label">Bench</span><span class="opt-sub">Entryway, bed, dining</span></button>
+          <button class="opt" data-choice="piece" data-value="counter"><span class="opt-ico">🏠</span><span class="opt-label">Countertop</span><span class="opt-sub">Kitchen, vanity, bar</span></button>
+          <button class="opt" data-choice="piece" data-value="desk"><span class="opt-ico">✍</span><span class="opt-label">Desk</span><span class="opt-sub">Home office, studio</span></button>
+          <button class="opt" data-choice="piece" data-value="other"><span class="opt-ico">✨</span><span class="opt-label">Something else</span><span class="opt-sub">Tell us about it</span></button>
+        </div>
+        <div class="step-actions">
+          <button class="step-back" disabled>← Back</button>
+          <button class="step-next" data-next>Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-panel" data-panel="2">
+        <div class="step-num-label">Step 02 of 05</div>
+        <h3>Which material speaks to you?</h3>
+        <div class="step-sub">Most of our pieces combine two. We'll suggest a palette — no need to decide today.</div>
+        <div class="opt-grid opt-grid-3">
+          <button class="opt" data-choice="material" data-value="wood"><span class="opt-ico">🌳</span><span class="opt-label">Wood</span><span class="opt-sub">Walnut, oak, maple</span></button>
+          <button class="opt" data-choice="material" data-value="concrete"><span class="opt-ico">⬛</span><span class="opt-label">Concrete</span><span class="opt-sub">Light, strong, cool</span></button>
+          <button class="opt" data-choice="material" data-value="epoxy"><span class="opt-ico">💎</span><span class="opt-label">Epoxy</span><span class="opt-sub">Rivers, inlays, depth</span></button>
+          <button class="opt" data-choice="material" data-value="wood-epoxy"><span class="opt-ico">🌳💎</span><span class="opt-label">Wood + Epoxy</span><span class="opt-sub">Live edge, river</span></button>
+          <button class="opt" data-choice="material" data-value="wood-concrete"><span class="opt-ico">🌳⬛</span><span class="opt-label">Wood + Concrete</span><span class="opt-sub">Warm base, cool top</span></button>
+          <button class="opt" data-choice="material" data-value="unsure"><span class="opt-ico">?</span><span class="opt-label">Let's discuss</span><span class="opt-sub">We'll suggest</span></button>
+        </div>
+        <div class="step-actions">
+          <button class="step-back">← Back</button>
+          <button class="step-next" data-next>Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-panel" data-panel="3">
+        <div class="step-num-label">Step 03 of 05</div>
+        <h3>Tell us about the space.</h3>
+        <div class="step-sub">Rough size is fine — we come measure before building.</div>
+        <div class="field-row">
+          <div class="field">
+            <label for="len">Approx. length</label>
+            <input type="text" id="len" placeholder="e.g. 8 feet" />
+          </div>
+          <div class="field">
+            <label for="wid">Approx. width / depth</label>
+            <input type="text" id="wid" placeholder="e.g. 40 inches" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="room">Where will it live?</label>
+          <input type="text" id="room" placeholder="e.g. Dining room, open to kitchen, seats 8–10" />
+        </div>
+        <div class="field">
+          <label for="aesthetic">A few words on the room's feel</label>
+          <input type="text" id="aesthetic" placeholder="e.g. Warm modern, heavy on natural light" />
+        </div>
+        <div class="step-actions">
+          <button class="step-back">← Back</button>
+          <button class="step-next" data-next>Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step-panel" data-panel="4">
+        <div class="step-num-label">Step 04 of 05</div>
+        <h3>What budget did you have in mind?</h3>
+        <div class="step-sub">A rough range helps us suggest the right material and scale. Our tables typically fall between $2,000 and $8,000.</div>
+        <div class="range-wrap">
+          <label>Budget range<b id="rangeVal">$3,500</b></label>
+          <input type="range" id="budget" min="1500" max="10000" step="500" value="3500" />
+          <div style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete-2);margin-top:10px">
+            <span>$1,500</span><span>$10,000+</span>
+          </div>
+        </div>
+        <div class="field" style="margin-top:10px">
+          <label for="timing">When do you hope to have it?</label>
+          <select id="timing">
+            <option>Within 8 weeks (rush)</option>
+            <option selected>Within 3 months (typical)</option>
+            <option>Within 6 months (no rush)</option>
+            <option>Flexible</option>
+          </select>
+        </div>
+        <div class="step-actions">
+          <button class="step-back">← Back</button>
+          <button class="step-next" data-next>Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="step-panel" data-panel="5">
+        <div class="step-num-label">Step 05 of 05</div>
+        <h3>How do we reach you?</h3>
+        <div class="step-sub">We'll text or email within two business days with a proposed direction, lead time, and quote range.</div>
+        <div class="field-row">
+          <div class="field"><label for="fn">Name</label><input type="text" id="fn" placeholder="Jane Doe" required /></div>
+          <div class="field"><label for="em">Email</label><input type="email" id="em" placeholder="you@example.com" required /></div>
+        </div>
+        <div class="field"><label for="ph">Phone <span style="text-transform:none;letter-spacing:0;color:var(--concrete-2)">(optional)</span></label><input type="tel" id="ph" placeholder="(xxx) xxx-xxxx" /></div>
+        <div class="field"><label for="notes">Anything else?</label><textarea id="notes" placeholder="Reference photos, inspiration, questions…"></textarea></div>
+        <div class="step-actions">
+          <button class="step-back">← Back</button>
+          <button class="step-next" id="submitBtn" type="button">Send · we'll reply in 48h <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- DONE -->
+      <div class="commission-done" id="done">
+        <div class="done-icon">✓</div>
+        <h3>Thank you. We'll be in touch.</h3>
+        <p>Mathieu will reach out personally within two business days. In the meantime, have a look at the gallery or text <b>647-621-5517</b> if you want to talk sooner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TESTIMONIALS
+     ========================================================= -->
+<section class="testimonials">
+  <div class="testimonials-header reveal">
+    <div class="eyebrow on-dark center">What clients say</div>
+    <h2>Pieces built for people — <em>who write back.</em></h2>
+  </div>
+  <div class="testimonials-track" id="track">
+    <div class="quote active">
+      <div class="quote-mark">&#x201C;</div>
+      <div class="quote-text">Mathieu didn't just deliver a table. He delivered <em>the table</em> — the one our family will keep passing down. He cared about it more than we did, and we cared a lot.</div>
+      <div class="quote-meta">
+        <div class="quote-name">— Sarah & James H.</div>
+        <div class="quote-role">Dining Table · Guelph</div>
+      </div>
+    </div>
+    <div class="quote">
+      <div class="quote-mark">&#x201C;</div>
+      <div class="quote-text">We asked for concrete countertops that felt warm, not industrial. What we got was better than the renderings, and Mathieu drove out twice before the pour to make sure the template was perfect.</div>
+      <div class="quote-meta">
+        <div class="quote-name">— Daniel R.</div>
+        <div class="quote-role">Kitchen Countertops · Toronto</div>
+      </div>
+    </div>
+    <div class="quote">
+      <div class="quote-mark">&#x201C;</div>
+      <div class="quote-text">Eight months from the first conversation to a 10-foot walnut table that made our whole house feel different. Worth every week of the wait and <em>every dollar.</em></div>
+      <div class="quote-meta">
+        <div class="quote-name">— Priya M.</div>
+        <div class="quote-role">The 10' Walnut · Mississauga</div>
+      </div>
+    </div>
+    <div class="quote">
+      <div class="quote-mark">&#x201C;</div>
+      <div class="quote-text">I've bought furniture from all over. This is the first piece I've owned where someone asked to see a photo of it a year later — to make sure it was still sitting right.</div>
+      <div class="quote-meta">
+        <div class="quote-name">— Lucas T.</div>
+        <div class="quote-role">Mill Road Bench · Ottawa</div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials-controls">
+    <button class="t-arrow" id="tPrev" aria-label="Previous quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <div class="t-dots" id="tDots"></div>
+    <button class="t-arrow" id="tNext" aria-label="Next quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg></button>
+  </div>
+</section>
+
+<!-- =========================================================
+     FAQ
+     ========================================================= -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="faq-header reveal">
+      <div class="eyebrow center">Commonly asked</div>
+      <h2>Questions we love <em>answering twice.</em></h2>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">How long does a typical piece take?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="faq-a"><p>Most dining tables run 10–16 weeks from contract to delivery. Smaller pieces (benches, coffee tables) run 6–10 weeks. Concrete countertops are paced around their 28-day cure. Rush timelines are possible — ask.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Do you ship outside of Ontario?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="faq-a"><p>We deliver and install anywhere in Ontario ourselves. For the rest of Canada and the northern US, we crate pieces professionally and ship via specialty furniture freight. We've shipped to BC, Quebec, and New York without incident.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Can I visit the workshop?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="faq-a"><p>Yes — and most clients do at least once. We'll pick through slabs together, look at finish samples, and sit at a few tables to talk height and scale. The shop is just outside Guelph; visits are by appointment.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">How do I care for it?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="faq-a"><p>Every piece ships with written care instructions specific to its material. Oil-finished wood takes an occasional re-oil (we supply the first can). Sealed concrete is dishwasher-simple. Epoxy river tops clean up with a damp cloth. We're a phone call away for life.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">What's the deposit structure?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="faq-a"><p>50% to begin — this covers material and locks your spot in the build queue. 50% on delivery. For commissions over $10,000 we sometimes split the final payment into two.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Can I bring my own slab or wood?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="faq-a"><p>Yes. Heritage wood — a tree from a family property, reclaimed beams from a barn — is some of our favourite material to work with. Tell us about it and we'll talk you through drying, milling, and whether the piece you're picturing is possible.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <div class="eyebrow">Let's talk</div>
+      <h2>Text. Call. <em>Or write us a note.</em></h2>
+      <p>The fastest way to reach us is a text. The slowest — but maybe the nicest — is a letter, if you're so inclined. Either way, we answer everything personally.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Phone · text welcome</div>
+            <div class="contact-detail-value"><a href="tel:+16476215517">647 · 621 · 5517</a></div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value"><a href="mailto:MillRoadWoodAndConcrete@gmail.com">MillRoadWoodAndConcrete@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Workshop</div>
+            <div class="contact-detail-value">Guelph, Ontario · Visits by appointment</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Instagram · Facebook</div>
+            <div class="contact-detail-value"><a href="https://instagram.com/millroadwoodandconcrete/" target="_blank" rel="noopener">@millroadwoodandconcrete</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right reveal reveal-delay-1">
+      <div class="eyebrow" style="margin-bottom:8px">Send a message</div>
+      <h3 style="font-family:var(--serif);font-size:28px;font-weight:400;letter-spacing:-0.01em;margin-bottom:28px">Start a conversation.</h3>
+      <form id="contactForm">
+        <div class="field-row">
+          <div class="field"><label for="cName">Name</label><input type="text" id="cName" required /></div>
+          <div class="field"><label for="cEmail">Email</label><input type="email" id="cEmail" required /></div>
+        </div>
+        <div class="field"><label for="cPhone">Phone <span style="text-transform:none;letter-spacing:0;color:var(--concrete-2)">(optional)</span></label><input type="tel" id="cPhone" /></div>
+        <div class="field"><label for="cSubj">Subject</label><input type="text" id="cSubj" placeholder="Inquiry" /></div>
+        <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="service-area">
+    <div>We deliver · We install · We ship</div>
+    <div><b>Guelph · Hamilton · Toronto · Ottawa · Montreal · New York</b></div>
+    <div>Typical lead time 10–16 weeks</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Mill Road <em>Wood · Concrete · Epoxy</em></h3>
+      <p>Custom tables, benches, and countertops — hand-built by Mathieu Poulin in Guelph, Ontario. Functional installation art, made to last generations.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/millroadwoodandconcrete/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100093498666779" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#process">The Craft</a></li>
+        <li><a href="#portfolio">Gallery</a></li>
+        <li><a href="#about">Who We Are</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Work with us</h4>
+      <ul>
+        <li><a href="#commission">Commission</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+16476215517">Text or Call</a></li>
+        <li><a href="mailto:MillRoadWoodAndConcrete@gmail.com">Email</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Workshop</h4>
+      <ul>
+        <li>Guelph, Ontario</li>
+        <li>647 · 621 · 5517</li>
+        <li>Visits by appointment</li>
+        <li style="padding-top:8px;color:var(--gold-2);font-family:var(--serif);font-size:12px">Est. 2023</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© <span id="yr"></span> Mill Road Wood and Concrete · All rights reserved</div>
+    <div>Handmade in Guelph · Built with care</div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     LIGHTBOX MODAL
+     ========================================================= -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <button class="lightbox-nav prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button class="lightbox-nav next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg></button>
+    <div class="lightbox-media"><img id="lbImg" src="" alt="" /></div>
+    <div class="lightbox-body">
+      <div class="eyebrow" id="lbTag">Gallery</div>
+      <h3 id="lbTitle"></h3>
+      <div class="price" id="lbPrice"></div>
+      <p id="lbDesc"></p>
+      <div class="lightbox-specs" id="lbSpecs"></div>
+      <div class="lightbox-actions">
+        <a href="#commission" class="btn btn-primary" id="lbCommission">Commission one like this
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+<script>
+(function(){
+  'use strict';
+  // -----------------------------
+  // Preloader
+  // -----------------------------
+  window.addEventListener('load', function(){
+    setTimeout(function(){ document.getElementById('preloader').classList.add('done'); }, 1400);
+  });
+
+  // -----------------------------
+  // Year
+  // -----------------------------
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // -----------------------------
+  // Nav: scroll-state + burger
+  // -----------------------------
+  var nav = document.getElementById('nav');
+  var burger = document.getElementById('burger');
+  var overlay = document.getElementById('navOverlay');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+  });
+  burger.addEventListener('click', function(){
+    burger.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+  });
+  overlay.querySelectorAll('.nav-o-link').forEach(function(a){
+    a.addEventListener('click', function(){
+      burger.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // -----------------------------
+  // Reveal on scroll
+  // -----------------------------
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold: 0.14, rootMargin: '0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // -----------------------------
+  // Portfolio data + rendering
+  // -----------------------------
+  var CDN = 'https://images.squarespace-cdn.com/content/v1/642876669e58da23c23d4341/';
+  var pieces = [
+    { title: "The 10' Walnut",            price: "$7,500",  type: "tables",      material: ["wood","epoxy"],    size: "w-8 wide",  img: "1683824194123-O808MAPWOX7NWELZLWPJ/Wed+A%26T+session-030small+leaf+bottom.jpg", specs: {Wood:"Black walnut",Length:"10 feet",Finish:"Hand-rubbed oil",Seats:"12–14"}, desc: "A single ten-foot slab of kiln-dried black walnut, flattened by hand and epoxy-stabilized. Built for a family that wanted one long table and twenty chairs around it."},
+    { title: "The Arkell",                price: "$5,800",  type: "tables",      material: ["wood","epoxy"],    size: "w-4 tall",  img: "530f9d79-6902-4751-bb17-32fe6b86ae30/2N0A1573.jpg", specs: {Wood:"White oak",Length:"8 feet",Finish:"Matte oil",Base:"Steel I-beam"}, desc: "A live-edge white oak dining table with a stabilized river inlay, resting on a blackened-steel I-beam base. Built for a modern farmhouse north of Guelph."},
+    { title: "The Conical Base",          price: "$5,000",  type: "tables",      material: ["wood"],            size: "w-4",       img: "d3b4eb0f-72e4-4e24-92c1-69ee0d92cc47/2N0A2635.jpg", specs: {Top:"Walnut",Base:"Turned conical",Length:"6 feet",Lead:"12 weeks"}, desc: "A hand-turned conical base in solid walnut, supporting a figured walnut top. Quiet, sculptural, and stable — our most-requested dining silhouette."},
+    { title: "The Grand Cathedral",       price: "$2,800",  type: "tables",      material: ["wood"],            size: "w-4",       img: "1683821868652-2RKICW05Z2SGXZEMWPHK/tempImageoJFNpo.gif", specs: {Wood:"Reclaimed pine",Style:"Cathedral grain",Length:"7 feet",Finish:"Soft wax"}, desc: "A tribute to reclaimed-pine beams and their cathedral-grained arches. Hand-planed for a surface that's smooth to the palm but tells its age to the eye."},
+    { title: "The Sir Graham",            price: "$2,900",  type: "tables",      material: ["wood","epoxy"],    size: "w-4",       img: "1701968057865-LLPA6TBKD9AOH6X0LX34/tempImagePodziT.gif", specs: {Wood:"Maple",Length:"5 feet",Finish:"Satin oil",Legs:"Tapered"}, desc: "A maple dining table with tapered legs and a shallow epoxy inlay along the heartwood split. Named for the client's golden retriever — who supervised every fitting."},
+    { title: "The Darcy",                 price: "$2,500",  type: "tables",      material: ["wood"],            size: "w-4",       img: "11fb883e-0437-4097-96b2-ca7538061a5c/IMG_9488.jpg", specs: {Wood:"Cherry",Length:"5 feet",Base:"Trestle",Finish:"Oil"}, desc: "A cherry trestle dining table that deepens to a rich red-brown over its first year. Built compact for a narrow Toronto rowhouse."},
+    { title: "The Eugenia",               price: "$1,900",  type: "tables",      material: ["wood"],            size: "w-4 tall",  img: "11fb883e-0437-4097-96b2-ca7538061a5c/IMG_9488.jpg", specs: {Wood:"Maple",Length:"4 feet",Type:"Breakfast table",Seats:"4"}, desc: "A compact breakfast table for a pair of early risers. Solid maple, hand-rubbed finish, round top by request."},
+    { title: "The Abbie",                 price: "$1,990",  type: "tables",      material: ["wood"],            size: "w-4",       img: "11fb883e-0437-4097-96b2-ca7538061a5c/IMG_9488.jpg", specs: {Wood:"White oak",Type:"Console",Length:"6 feet",Depth:"14 inches"}, desc: "A long, shallow console table for an entryway. White oak with soft-wax finish and quiet-close drawer on hand-cut dovetails."},
+    { title: "Night Stands",              price: "$1,700",  type: "tables",      material: ["wood"],            size: "w-4",       img: "701a2214-f622-4a13-a605-faffc676690f/IMG_1040.jpeg", specs: {Wood:"Walnut",Count:"2 (pair)",Height:"26 inches",Drawers:"Dovetailed"}, desc: "A matched pair of walnut nightstands with hand-cut dovetails and oil finish. Book-matched tops from a single slab so they belong to each other."},
+    { title: "Reclaimed Pine Coffee",     price: "$2,100",  type: "tables",      material: ["wood"],            size: "w-4 tall",  img: "1683302821040-W6BBEJECGJEWP1HFUTFM/IMG_1371.jpg", specs: {Wood:"Reclaimed pine",Style:"Low + wide",Length:"5 feet",Finish:"Soft wax"}, desc: "Reclaimed pine coffee table with nail holes and history intact. Hand-planed, wax-finished, and built low to the ground."},
+    { title: "The Mill Road Bench",       price: "$2,800",  type: "benches",     material: ["wood"],            size: "w-8 wide",  img: "1682359540908-DLIAI5999BN3LKDMGR2M/signature+bench+pan+shot+wide+end.jpg", specs: {Wood:"Walnut",Length:"6 feet",Legs:"Splayed",Style:"Signature"}, desc: "Our signature bench — a single walnut slab on splayed oak legs. Equal parts entryway, bedroom foot-of-bed, and extra seating when the table fills up."},
+    { title: "Reclaimed Pine Entry Bench",price: "$1,650",  type: "benches",     material: ["wood"],            size: "w-4",       img: "1684245717043-TWX2MCGEE5I4K75S0980/tempImageOBz5ZZ.gif", specs: {Wood:"Reclaimed pine",Length:"4 feet",Style:"Entryway",Finish:"Oiled"}, desc: "A reclaimed-pine entryway bench with a low shelf for boots below. Patina intact, surface hand-sanded to silk."},
+    { title: "Reclaimed Pine Vanity",     price: "$5,400",  type: "countertops", material: ["wood"],            size: "w-4",       img: "1683749515456-XBOTDL0XY9BT110Y8XNJ/tempImagebQTzTO.gif", specs: {Wood:"Reclaimed pine",Type:"Built-in vanity",Length:"6 feet",Integrated:"Sink"}, desc: "A reclaimed-pine built-in vanity with integrated sink support and a waterproof finish. Built on-site over a weekend."},
+    { title: "Concrete Countertops",      price: "$2,100",  type: "countertops", material: ["concrete"],        size: "w-4",       img: "1683749515456-XBOTDL0XY9BT110Y8XNJ/tempImagebQTzTO.gif", specs: {Material:"Cast concrete",Thickness:"1.5 in",Cure:"28 days",Sealer:"Food-safe"}, desc: "Cast-concrete countertops in a warm grey finish, sealed food-safe and hand-polished. Shown here in a kitchen near Hamilton."},
+    { title: "Concrete Coffee Table",     price: "$1,700",  type: "countertops", material: ["concrete","wood"], size: "w-4 tall",  img: "1683227734814-160YAQV033FC5HMZ6LPC/tempImageycN9Eo.gif", specs: {Top:"Cast concrete",Base:"Walnut",Length:"4 feet",Weight:"110 lbs"}, desc: "A cast-concrete top on a walnut trestle base — the Mill Road tension in one small object. Cool, warm, quiet."}
+  ];
+
+  function renderPortfolio(typeFilter, matFilter){
+    var grid = document.getElementById('portfolioGrid');
+    grid.innerHTML = '';
+    pieces.forEach(function(p, i){
+      var show = true;
+      if (typeFilter && typeFilter !== 'all' && p.type !== typeFilter) show = false;
+      if (matFilter && matFilter !== 'all' && p.material.indexOf(matFilter) === -1) show = false;
+      var el = document.createElement('div');
+      el.className = 'piece ' + p.size + (show ? '' : ' hidden');
+      el.dataset.idx = i;
+      el.innerHTML =
+        '<div class="piece-img"><img src="' + CDN + p.img + '?format=1000w" alt="' + p.title + '" loading="lazy" onerror="this.style.background=\'#6f6a64\'"/></div>' +
+        '<div class="piece-overlay">' +
+          '<div class="piece-info"><h4>' + p.title + '</h4><div class="piece-meta">' + p.type + ' · ' + p.material.join(' + ') + '</div></div>' +
+          '<div class="piece-price">' + p.price + '</div>' +
+        '</div>';
+      el.addEventListener('click', function(){ openLightbox(i); });
+      grid.appendChild(el);
+    });
+  }
+  renderPortfolio('all', null);
+
+  // Filters
+  var typeFilter = 'all', matFilter = null;
+  document.querySelectorAll('.portfolio-filters .filter').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (b.dataset.filter){
+        typeFilter = b.dataset.filter;
+        document.querySelectorAll('.portfolio-filters .filter[data-filter]').forEach(function(x){x.classList.remove('active')});
+        b.classList.add('active');
+      } else if (b.dataset.material){
+        if (b.classList.contains('active')){ matFilter = null; b.classList.remove('active'); }
+        else {
+          matFilter = b.dataset.material;
+          document.querySelectorAll('.portfolio-filters .filter[data-material]').forEach(function(x){x.classList.remove('active')});
+          b.classList.add('active');
+        }
+      }
+      renderPortfolio(typeFilter, matFilter);
+    });
+  });
+
+  // Collection cards map to portfolio filter
+  document.querySelectorAll('.collection').forEach(function(c){
+    c.addEventListener('click', function(ev){
+      var f = c.dataset.filter;
+      if (!f) return;
+      setTimeout(function(){
+        typeFilter = f;
+        matFilter = null;
+        document.querySelectorAll('.portfolio-filters .filter[data-filter]').forEach(function(x){x.classList.remove('active');if(x.dataset.filter===f) x.classList.add('active');});
+        document.querySelectorAll('.portfolio-filters .filter[data-material]').forEach(function(x){x.classList.remove('active');});
+        renderPortfolio(typeFilter, matFilter);
+      }, 600);
+    });
+  });
+
+  // -----------------------------
+  // Lightbox
+  // -----------------------------
+  var lb = document.getElementById('lightbox');
+  var lbIdx = 0;
+  function openLightbox(i){
+    lbIdx = i;
+    var p = pieces[i];
+    document.getElementById('lbImg').src = CDN + p.img + '?format=2000w';
+    document.getElementById('lbImg').alt = p.title;
+    document.getElementById('lbTitle').textContent = p.title;
+    document.getElementById('lbPrice').textContent = p.price;
+    document.getElementById('lbDesc').textContent = p.desc;
+    document.getElementById('lbTag').textContent = p.type + ' · ' + p.material.join(' + ');
+    var specs = '';
+    Object.keys(p.specs).forEach(function(k){ specs += '<div class="spec">' + k + '<b>' + p.specs[k] + '</b></div>'; });
+    document.getElementById('lbSpecs').innerHTML = specs;
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  function stepLightbox(dir){
+    lbIdx = (lbIdx + dir + pieces.length) % pieces.length;
+    openLightbox(lbIdx);
+  }
+  lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lb.querySelector('.lightbox-nav.prev').addEventListener('click', function(){ stepLightbox(-1); });
+  lb.querySelector('.lightbox-nav.next').addEventListener('click', function(){ stepLightbox(1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', function(e){
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') stepLightbox(-1);
+    if (e.key === 'ArrowRight') stepLightbox(1);
+  });
+
+  // -----------------------------
+  // Commission flow
+  // -----------------------------
+  var step = 1, totalSteps = 5;
+  var progressEls = document.querySelectorAll('#progress span');
+  var stepsList = document.querySelectorAll('#stepsList li');
+  var panels = document.querySelectorAll('.step-panel');
+  var submissions = {};
+
+  function showStep(n){
+    panels.forEach(function(p){ p.classList.toggle('active', +p.dataset.panel === n); });
+    progressEls.forEach(function(s, i){
+      s.classList.toggle('done', i < n - 1);
+      s.classList.toggle('active', i === n - 1);
+    });
+    stepsList.forEach(function(li){
+      var n2 = +li.dataset.step;
+      li.classList.toggle('active', n2 === n);
+      li.classList.toggle('done', n2 < n);
+    });
+  }
+  document.querySelectorAll('.step-next').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (btn.id === 'submitBtn'){
+        // Collect values (demo)
+        submissions.name = document.getElementById('fn').value;
+        submissions.email = document.getElementById('em').value;
+        if (!submissions.name || !submissions.email){
+          document.getElementById('fn').focus();
+          return;
+        }
+        // Fake submit
+        document.querySelectorAll('.step-panel').forEach(function(p){p.classList.remove('active')});
+        document.getElementById('done').classList.add('active');
+        progressEls.forEach(function(s){ s.classList.remove('active'); s.classList.add('done'); });
+        stepsList.forEach(function(li){ li.classList.add('done'); li.classList.remove('active'); });
+        return;
+      }
+      if (step < totalSteps){ step++; showStep(step); }
+    });
+  });
+  document.querySelectorAll('.step-back').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (step > 1){ step--; showStep(step); }
+    });
+  });
+
+  // Option selection (visual state)
+  document.querySelectorAll('.opt').forEach(function(o){
+    o.addEventListener('click', function(){
+      var choice = o.dataset.choice;
+      document.querySelectorAll('.opt[data-choice="' + choice + '"]').forEach(function(x){ x.classList.remove('selected'); });
+      o.classList.add('selected');
+      submissions[choice] = o.dataset.value;
+    });
+  });
+
+  // Budget range
+  var range = document.getElementById('budget');
+  var rangeVal = document.getElementById('rangeVal');
+  function updateRange(){
+    var v = +range.value;
+    var pct = ((v - range.min) / (range.max - range.min)) * 100;
+    range.style.setProperty('--p', pct + '%');
+    rangeVal.textContent = '$' + v.toLocaleString();
+    submissions.budget = v;
+  }
+  range.addEventListener('input', updateRange);
+  updateRange();
+
+  // -----------------------------
+  // Testimonials carousel
+  // -----------------------------
+  var quotes = document.querySelectorAll('.quote');
+  var dots = document.getElementById('tDots');
+  var q = 0;
+  for (var i = 0; i < quotes.length; i++){
+    var d = document.createElement('button');
+    d.className = 't-dot' + (i === 0 ? ' active' : '');
+    d.dataset.i = i;
+    d.setAttribute('aria-label', 'Quote ' + (i+1));
+    dots.appendChild(d);
+    d.addEventListener('click', function(){ go(+this.dataset.i); });
+  }
+  function go(n){
+    q = (n + quotes.length) % quotes.length;
+    quotes.forEach(function(x, i){ x.classList.toggle('active', i === q); });
+    dots.querySelectorAll('.t-dot').forEach(function(x, i){ x.classList.toggle('active', i === q); });
+  }
+  document.getElementById('tPrev').addEventListener('click', function(){ go(q - 1); });
+  document.getElementById('tNext').addEventListener('click', function(){ go(q + 1); });
+  var autoQ = setInterval(function(){ go(q + 1); }, 7000);
+  document.querySelector('.testimonials-track').addEventListener('mouseenter', function(){ clearInterval(autoQ); });
+
+  // -----------------------------
+  // FAQ accordion
+  // -----------------------------
+  document.querySelectorAll('.faq-item').forEach(function(it){
+    it.querySelector('.faq-q').addEventListener('click', function(){
+      it.classList.toggle('open');
+    });
+  });
+
+  // -----------------------------
+  // Contact form (demo)
+  // -----------------------------
+  var cf = document.getElementById('contactForm');
+  cf.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = cf.querySelector('button[type=submit]');
+    btn.textContent = 'Sent — we\'ll reply within 48h';
+    btn.style.background = 'var(--forest)';
+    btn.style.borderColor = 'var(--forest)';
+    cf.reset();
+    setTimeout(function(){
+      btn.innerHTML = 'Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      btn.style.background = '';
+      btn.style.borderColor = '';
+    }, 4000);
+  });
+
+  // -----------------------------
+  // Smooth scroll for anchor links
+  // -----------------------------
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      var t = document.querySelector(id);
+      if (t){
+        e.preventDefault();
+        window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
